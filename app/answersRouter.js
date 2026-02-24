@@ -129,7 +129,7 @@ answersRouter.post("/answers/:answerId/vote", async (req, res) => {
 
         const answer = await connectionPool.query(
         `
-        SELECT * FROM questions
+        SELECT * FROM answers
         WHERE id = $1
         `,
         [answerIdFromClient]
